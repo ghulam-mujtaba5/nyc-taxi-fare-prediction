@@ -31,32 +31,32 @@ This project is part of the **Google Advanced Data Analytics Professional Certif
 
 | Category             | Tools & Libraries                             |
 |----------------------|-----------------------------------------------|
-| Language             | ![Python](https://img.shields.io/badge/Python-3.10-blue) |
-| IDE / Platform       | Jupyter Notebook                              |
-| Data Manipulation    | Pandas, NumPy                                 |
-| Statistical Modeling | Statsmodels, Scikit-learn                     |
-| Visualization        | Matplotlib, Seaborn                           |
-| Testing              | SciPy (for t-tests), Statsmodels              |
+| Language             | Python 3.10                                    |
+| IDE / Platform       | Jupyter Notebook                               |
+| Data Manipulation    | Pandas, NumPy                                  |
+| Statistical Modeling | Statsmodels, Scikit-learn                      |
+| Visualization        | Matplotlib, Seaborn                            |
+| Testing              | SciPy (for t-tests), Statsmodels               |
 
 ---
 
 ## 📚 Methodology
 
 ### 🧹 1. Data Preprocessing
-- Removed missing or zero values for `fare_amount`, `trip_distance`, and `passenger_count` to ensure data quality
-- Detected and eliminated extreme outliers using the IQR method for robust analysis
-- Converted boolean features (e.g., `payment_type_2`, `payment_type_3`) to integer format for modeling
+- Dropped missing or zero values for `fare_amount`, `trip_distance`, and `passenger_count`
+- Removed extreme outliers using IQR method
+- Converted boolean features (e.g., `payment_type_2`, `payment_type_3`) to integer format
 
 ### 📊 2. A/B Testing
-- Performed two-sample t-tests to compare mean fare amounts between payment groups (e.g., credit card vs cash)
-- Visualized group distributions using boxplots for clear comparison
-- **Result:** Payment types showed statistically significant differences in average fare
+- Conducted two-sample t-tests between groups (e.g., credit card vs cash)
+- Visualized group distributions using boxplots
+- Result: **Payment types showed statistically significant differences in average fare**
 
 ### 🔢 3. Regression Modeling
-- Selected features: `trip_distance`, `passenger_count`, and one-hot encoded `payment_type`
-- Built a multiple linear regression model using `statsmodels.OLS` for interpretability
+- Features: `trip_distance`, `passenger_count`, and one-hot encoded `payment_type`
+- Used `statsmodels.OLS` for better interpretability
 - Included intercept term with `sm.add_constant()`
-- Verified model assumptions: linearity, residual normality, and homoscedasticity for reliable inference
+- Checked model assumptions: linearity, residual normality, and homoscedasticity
 
 ---
 
@@ -132,4 +132,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 * Google Advanced Data Analytics Professional Certificate (Course 4)  
 * NYC TLC for providing the open dataset  
-* Statsmodels & Seaborn documentation for guidance
+* Statsmodels & Seaborn documentation for guidance  
